@@ -99,8 +99,69 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <footer class="site-footer">
     <span>Marketismo — 2026</span>
-    <a href="https://marketismo.substack.com/" target="_blank" rel="noopener">marketismo.substack.com</a>
+    <div class="footer-links">
+      <a href="https://marketismo.substack.com/" target="_blank" rel="noopener">marketismo.substack.com</a>
+      <button type="button" class="link-btn" id="mk-consent-reopen">Cookies</button>
+    </div>
   </footer>
 </div>
+<!-- Cookie consent -->
+<div class="consent" id="mk-consent" role="dialog" aria-modal="false" aria-labelledby="mk-consent-title" hidden>
+  <div class="consent-inner">
+    <div class="consent-copy">
+      <h2 class="consent-title" id="mk-consent-title">Cookies</h2>
+      <p>I use Google Analytics to see which notes people actually read. Nothing is stored until you say yes, and I don't sell or share anything.</p>
+    </div>
+    <div class="consent-actions">
+      <button type="button" class="btn btn-secondary" data-consent="denied">Reject</button>
+      <button type="button" class="btn btn-primary" data-consent="granted">Accept</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var KEY = 'mk-consent';
+  var banner = document.getElementById('mk-consent');
+  var reopen = document.getElementById('mk-consent-reopen');
+
+  function apply(state) {
+    var v = state === 'granted' ? 'granted' : 'denied';
+    gtag('consent', 'update', {
+      'ad_storage': v,
+      'ad_user_data': v,
+      'ad_personalization': v,
+      'analytics_storage': v
+    });
+    window.dataLayer.push({ event: 'mk_consent_update', mk_consent_state: v });
+  }
+
+  function read() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+  function save(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+
+  var stored = read();
+  if (stored === 'granted' || stored === 'denied') { apply(stored); }
+  else { banner.hidden = false; }
+
+  banner.addEventListener('click', function (ev) {
+    var btn = ev.target.closest('[data-consent]');
+    if (!btn) return;
+    var state = btn.getAttribute('data-consent');
+    save(state);
+    apply(state);
+    banner.hidden = true;
+    if (reopen) reopen.focus();
+  });
+
+  if (reopen) {
+    reopen.addEventListener('click', function () {
+      banner.hidden = false;
+      var first = banner.querySelector('[data-consent]');
+      if (first) first.focus();
+    });
+  }
+})();
+</script>
 </body>
+
 </html>

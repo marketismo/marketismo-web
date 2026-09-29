@@ -161,7 +161,6 @@ a:hover { color: var(--color-accent-300); }
 .tile--experiment:hover { border-color: var(--color-accent); box-shadow: var(--shadow-lg); }
 .tile--experiment .tile-kicker { color: var(--color-accent-300); }
 .tile--experiment .tile-cta { color: var(--color-accent); }
-.tile--experiment .tile-title { margin-top: 0; }
 .tile-media {
   display: block; margin: -26px -26px 6px; aspect-ratio: 1200 / 630; overflow: hidden;
   border-bottom: 1px solid var(--color-neutral-800); background: var(--color-bg);
@@ -277,3 +276,23 @@ a:hover { color: var(--color-accent-300); }
 }
 .article-back { display: inline-flex; align-items: center; gap: 8px; margin-top: 28px; font-size: 13px; color: var(--color-neutral-300); text-decoration: none; }
 .article-back:hover { color: var(--color-accent); }
+
+/* — tiles with media: text sits under the picture, the call to action sinks to the bottom — */
+.tile-media ~ .tile-title { margin-top: 0; }
+.tile-media ~ .tile-cta { margin-top: auto; }
+
+/* — blog tile: fountain pen — */
+.tile-media--icon {
+  position: relative;
+  background:
+    radial-gradient(60% 90% at 50% 100%, rgba(226,2,3,0.22), transparent 70%),
+    radial-gradient(50% 60% at 80% 0%, rgba(224,122,120,0.10), transparent 70%),
+    #141416;
+}
+.pen-icon {
+  position: absolute; top: 8%; left: 50%; height: 84%; width: auto; aspect-ratio: 1;
+  transform: translateX(-50%);
+  filter: drop-shadow(0 10px 18px rgba(0,0,0,0.55));
+  transition: transform .6s cubic-bezier(.16,.84,.26,1);
+}
+.tile--featured:hover .pen-icon { transform: translateX(-50%) translate(-3px, -3px) rotate(-3deg); }

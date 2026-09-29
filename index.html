@@ -75,11 +75,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </span>
         </a>
 
-        <a class="tile" href="#">
-          <span class="tile-kicker">Placeholder tile</span>
-          <span class="tile-title">Experiments</span>
-          <span class="tile-body">A running log of what I've built and broken.</span>
-          <span class="tile-cta">Coming soon
+        <a class="tile tile--experiment" href="/experiments/calendar-ai/">
+          <span class="tile-media"><img src="assets/img/experiments/calendar-ai-1200.webp" alt="" width="1200" height="630" loading="lazy"></span>
+          <span class="tile-kicker">Experiment 1</span>
+          <span class="tile-title">A Calendar + AI</span>
+          <span class="tile-body">A concept portal for the British Council: every course, exam and event in one calendar, an AI level test with a teacher in the loop, and demand-based pricing.</span>
+          <span class="tile-cta">Read the experiment
             <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="m181.7 133.7-80 80a8 8 0 0 1-11.4-11.4L164.7 128 90.3 53.7a8 8 0 0 1 11.4-11.4l80 80a8 8 0 0 1 0 11.4Z"/></svg>
           </span>
         </a>
@@ -119,49 +120,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-<script>
-(function () {
-  var KEY = 'mk-consent';
-  var banner = document.getElementById('mk-consent');
-  var reopen = document.getElementById('mk-consent-reopen');
-
-  function apply(state) {
-    var v = state === 'granted' ? 'granted' : 'denied';
-    gtag('consent', 'update', {
-      'ad_storage': v,
-      'ad_user_data': v,
-      'ad_personalization': v,
-      'analytics_storage': v
-    });
-    window.dataLayer.push({ event: 'mk_consent_update', mk_consent_state: v });
-  }
-
-  function read() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
-  function save(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
-
-  var stored = read();
-  if (stored === 'granted' || stored === 'denied') { apply(stored); }
-  else { banner.hidden = false; }
-
-  banner.addEventListener('click', function (ev) {
-    var btn = ev.target.closest('[data-consent]');
-    if (!btn) return;
-    var state = btn.getAttribute('data-consent');
-    save(state);
-    apply(state);
-    banner.hidden = true;
-    if (reopen) reopen.focus();
-  });
-
-  if (reopen) {
-    reopen.addEventListener('click', function () {
-      banner.hidden = false;
-      var first = banner.querySelector('[data-consent]');
-      if (first) first.focus();
-    });
-  }
-})();
-</script>
+<script src="assets/js/consent.js"></script>
 </body>
 
 </html>

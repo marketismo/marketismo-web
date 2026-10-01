@@ -288,9 +288,10 @@ a:hover { color: var(--color-accent-300); }
 .poster-pen { transition: transform .6s cubic-bezier(.16,.84,.26,1); }
 .tile:hover .poster-rays { transform: rotate(10deg); }
 .tile:hover .poster-pen { transform: translate(-3px, 2px); }
-.poster-notes, .poster-jukebox { transition: transform .6s cubic-bezier(.16,.84,.26,1); }
+.poster-notes, .poster-jukebox, .poster-traces, .poster-calendar { transition: transform .6s cubic-bezier(.16,.84,.26,1); }
 .tile:hover .poster-notes { transform: translate(-4px, -3px); }
-.tile:hover .poster-jukebox { transform: translateY(-2px); }
+.tile:hover .poster-jukebox, .tile:hover .poster-calendar { transform: translateY(-2px); }
+.tile:hover .poster-traces { transform: translateX(-4px); }
 
 /* — article: points scoreboard — */
 .points { list-style: none; margin: 4px 0 20px; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }

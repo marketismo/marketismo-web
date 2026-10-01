@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Consent Mode v2 defaults - must run before GTM loads -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'functionality_storage': 'granted',
+    'security_storage': 'granted',
+    'wait_for_update': 500
+  });
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PH86G99C');</script>
+<!-- End Google Tag Manager -->
+<title>Experiment 2: Guess the year game — Marketismo</title>
+<meta name="description" content="An app that listens to the song playing and tells you what it is and who sings it, plus a party game where friends score points for guessing the song, the artist and the year.">
+<link rel="canonical" href="https://www.marketismo.com/experiments/guess-the-year/">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/icon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#e20203">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Marketismo">
+<meta property="og:title" content="Experiment 2: Guess the year">
+<meta property="og:description" content="Name that song, then guess when it came out. A music app and party game for the bar.">
+<meta property="og:url" content="https://www.marketismo.com/experiments/guess-the-year/">
+<meta property="og:image" content="https://www.marketismo.com/assets/img/experiments/guess-the-year-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Guess the year: a poster-style jukebox playing a record, in black, grey and red.">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap">
+<link rel="stylesheet" href="/assets/css/nocturne.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PH86G99C"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="page">
+
+  <header class="site-header site-header--compact">
+    <a class="logo-link" href="/" aria-label="Marketismo — home">
+      <img src="/assets/img/marketismo-logo.png" alt="Marketismo">
+    </a>
+    <div class="logo-fade" aria-hidden="true"></div>
+    <nav class="site-nav">
+      <a href="/">Home</a>
+      <a href="/#tiles">Experiments</a>
+      <a href="https://marketismo.substack.com/" target="_blank" rel="noopener">Blog</a>
+    </nav>
+  </header>
+
+  <main>
+    <article class="article">
+
+      <header class="article-head">
+        <div class="eyebrow">
+          <span class="eyebrow-mark"></span>
+          <span class="eyebrow-text">Experiment 2</span>
+        </div>
+        <h1>Guess <em>the year</em></h1>
+        <p class="article-lead">A song comes on at the bar. What is it, who sings it, and what year did it come out?</p>
+        <a class="article-jump" href="https://guess-the-year-fawn.vercel.app/" target="_blank" rel="noopener">Open the app
+          <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M200 64v104a8 8 0 0 1-16 0V83.3L69.7 197.7a8 8 0 0 1-11.4-11.4L172.7 72H88a8 8 0 0 1 0-16h104a8 8 0 0 1 8 8Z"/></svg>
+        </a>
+      </header>
+
+      <figure class="article-figure">
+        <img src="/assets/img/experiments/guess-the-year.svg" width="1200" height="630"
+             alt="A poster-style illustration of an old jukebox playing a record, with music notes and sound waves flying out of it, in black, grey and red.">
+      </figure>
+
+      <div class="article-body">
+
+        <h2>Why I built it</h2>
+        <p>I've loved music since I was 10, with my Walkman and its cassettes. I was a big fan of MTV back when it used to play music videos. Every stage of my life is strongly linked to the music I was listening to at the time, so I got very good at "guess the year" (of the song). It's actually part of VH1's daily broadcast, and I really enjoyed guessing the year of great songs that hold a special place in my memory. So now I've built this app.</p>
+
+        <h2>How it works</h2>
+        <p>Someone plays a song. You tap the record in the app, it listens, and it tells you the song's name and who sings it, so you can throw the question around your friends at the bar. You can also identify a song from an audio file, and every song you identify is saved in your history.</p>
+
+        <h2>Guess mode</h2>
+        <p>For a more structured game, switch on guess mode. Enter the number of players and their names: everyone gets 10 songs and one guess per song, taking turns. Each player scores points for every element they get right:</p>
+        <ul class="points">
+          <li><span class="points-value">15</span><span class="points-label">Song</span></li>
+          <li><span class="points-value">10</span><span class="points-label">Artist</span></li>
+          <li><span class="points-value">5</span><span class="points-label">Year</span></li>
+        </ul>
+        <p>After each guess, the app reveals the answer, including the year the song was first released. At the end, the final results show who knows their music best.</p>
+
+        <aside class="cta-panel" aria-labelledby="cta-title">
+          <span class="cta-kicker">Guess the year</span>
+          <h2 class="cta-title" id="cta-title">Just push play</h2>
+          <p>Open it on your phone, play a song nearby and tap the record. Your browser will ask for permission to use the microphone.</p>
+          <a class="cta-button" href="https://guess-the-year-fawn.vercel.app/" target="_blank" rel="noopener">Open Guess the year
+            <svg width="16" height="16" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M200 64v104a8 8 0 0 1-16 0V83.3L69.7 197.7a8 8 0 0 1-11.4-11.4L172.7 72H88a8 8 0 0 1 0-16h104a8 8 0 0 1 8 8Z"/></svg>
+          </a>
+          <span class="cta-url">guess-the-year-fawn.vercel.app</span>
+        </aside>
+
+        <a class="article-back" href="/#tiles">
+          <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M165.7 202.3a8 8 0 0 1-11.4 11.4l-80-80a8 8 0 0 1 0-11.4l80-80a8 8 0 0 1 11.4 11.4L91.3 128Z"/></svg>
+          All experiments
+        </a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <span>Marketismo — 2026</span>
+    <div class="footer-links">
+      <a href="https://marketismo.substack.com/" target="_blank" rel="noopener">marketismo.substack.com</a>
+      <button type="button" class="link-btn" id="mk-consent-reopen">Cookies</button>
+    </div>
+  </footer>
+</div>
+<!-- Cookie consent -->
+<div class="consent" id="mk-consent" role="dialog" aria-modal="false" aria-labelledby="mk-consent-title" hidden>
+  <div class="consent-inner">
+    <div class="consent-copy">
+      <h2 class="consent-title" id="mk-consent-title">Cookies</h2>
+      <p>I use Google Analytics to see which notes people actually read. Nothing is stored until you say yes, and I don't sell or share anything.</p>
+    </div>
+    <div class="consent-actions">
+      <button type="button" class="btn btn-secondary" data-consent="denied">Reject</button>
+      <button type="button" class="btn btn-primary" data-consent="granted">Accept</button>
+    </div>
+  </div>
+</div>
+<script src="/assets/js/consent.js"></script>
+</body>
+</html>

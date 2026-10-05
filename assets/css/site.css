@@ -55,6 +55,7 @@ a:hover { color: var(--color-accent-300); }
 .site-nav a, .site-footer a { color: var(--color-neutral-300); text-decoration: none; }
 .site-nav a { font-size: 13px; }
 .site-nav a:hover, .site-footer a:hover { color: var(--color-accent); }
+.site-nav a[aria-current="page"] { color: var(--color-text); }
 
 /* — hero — */
 .hero {
@@ -288,10 +289,12 @@ a:hover { color: var(--color-accent-300); }
 .poster-pen { transition: transform .6s cubic-bezier(.16,.84,.26,1); }
 .tile:hover .poster-rays { transform: rotate(10deg); }
 .tile:hover .poster-pen { transform: translate(-3px, 2px); }
-.poster-notes, .poster-jukebox, .poster-traces, .poster-calendar { transition: transform .6s cubic-bezier(.16,.84,.26,1); }
+.poster-notes, .poster-jukebox, .poster-traces, .poster-calendar, .poster-bars, .poster-portrait { transition: transform .6s cubic-bezier(.16,.84,.26,1); }
 .tile:hover .poster-notes { transform: translate(-4px, -3px); }
 .tile:hover .poster-jukebox, .tile:hover .poster-calendar { transform: translateY(-2px); }
 .tile:hover .poster-traces { transform: translateX(-4px); }
+.tile:hover .poster-bars { transform: translate(-6px, 2px); }
+.tile:hover .poster-portrait { transform: translateY(-2px); }
 
 /* — article: points scoreboard — */
 .points { list-style: none; margin: 4px 0 20px; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
@@ -303,3 +306,26 @@ a:hover { color: var(--color-accent-300); }
 .points-value { font-family: var(--font-heading); font-weight: 500; font-size: clamp(30px, 4vw, 40px); line-height: 1; letter-spacing: -0.03em; color: var(--color-text); }
 .points-value::after { content: " pts"; font-size: 13px; letter-spacing: 0.02em; color: var(--color-neutral-500); }
 .points-label { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-300); }
+
+/* — about: career and key facts — */
+.career { list-style: none; margin: 4px 0 20px; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.career li {
+  padding: 9px 14px; font-size: 14px; color: var(--color-text);
+  background: var(--color-surface); border: 1px solid var(--color-neutral-800);
+}
+.career li span { margin-left: 6px; font-size: 12px; color: var(--color-neutral-500); }
+.facts { list-style: none; margin: 4px 0 20px; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.facts li {
+  display: flex; flex-direction: column; gap: 6px; padding: 18px 20px;
+  background: var(--color-surface); border: 1px solid var(--color-neutral-800);
+}
+.facts li:first-child { border-color: var(--color-accent-700); background: linear-gradient(165deg, var(--color-accent-900), var(--color-surface) 75%); }
+.facts-value { font-family: var(--font-heading); font-weight: 500; font-size: clamp(26px, 3.4vw, 34px); line-height: 1; letter-spacing: -0.03em; color: var(--color-text); }
+.facts-label { font-size: 11px; line-height: 1.4; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-accent-300); }
+@media (max-width: 520px) { .facts { grid-template-columns: 1fr; } }
+
+/* — call to action with a secondary link — */
+.cta-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 26px; margin-top: 24px; }
+.cta-actions .cta-button { margin-top: 0; }
+.cta-secondary { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; color: var(--color-neutral-200); text-decoration: none; }
+.cta-secondary:hover { color: var(--color-accent); }

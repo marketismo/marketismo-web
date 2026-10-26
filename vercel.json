@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    { "source": "/second-brain", "destination": "/second-brain/", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/second-brain/", "destination": "https://second-brain-marketismo.vercel.app/" },
+    { "source": "/second-brain/:path+", "destination": "https://second-brain-marketismo.vercel.app/:path+" }
+  ]
+}

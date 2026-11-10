@@ -10,6 +10,11 @@
       "source": "/alma/dashboard",
       "destination": "/alma/dashboard/",
       "permanent": true
+    },
+    {
+      "source": "/calendar",
+      "destination": "/calendar/",
+      "permanent": true
     }
   ],
   "rewrites": [
@@ -28,6 +33,14 @@
     {
       "source": "/alma/dashboard/:path+",
       "destination": "https://alma-platform-mockup.vercel.app/:path+"
+    },
+    {
+      "source": "/calendar/",
+      "destination": "https://bc-calendar.vercel.app/"
+    },
+    {
+      "source": "/calendar/:path+",
+      "destination": "https://bc-calendar.vercel.app/:path+"
     }
   ]
 }

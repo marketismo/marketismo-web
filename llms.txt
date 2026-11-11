@@ -1,0 +1,32 @@
+# Marketismo
+
+> Marketismo is the blog and project site of Marcelo Laserna (Marcelo Laserna Villarroya), a Madrid-based Marketing leader with 15+ years in multinational companies across FMCG, tourism, automotive and education. Most recently Global Senior Marketing Manager B2B at the British Council (2022-2026). Open to senior Marketing roles: Head of Marketing, Marketing Director, CMO, Head of Growth, Global B2B Marketing, Marketing and AI transformation. Contact: marcelo@marketismo.com · https://www.linkedin.com/in/marcelolv/
+
+## About Marcelo Laserna
+
+- [About (English)](https://www.marketismo.com/about/): profile, results, career, roles he is open to, and FAQ
+- [Sobre mí (español)](https://www.marketismo.com/es/sobre-mi/): perfil, resultados, trayectoria, puestos a los que está abierto y preguntas frecuentes
+
+Career:
+- Global Senior Marketing Manager B2B, British Council (2022-2026): built the global B2B Marketing department; brand identity for B2B English services; campaigns in 20 countries generating SQLs; HubSpot implemented and integrated with Salesforce; managed a team of 9 and led regional Marketing teams; revenue grew 20% YoY and doubled in 4 years
+- Spain Marketing Manager English Teaching, British Council Spain (2014-2022): Senior Management Team member; built the B2C Marketing department; team of 5; +12% YoY SQLs; new courses adding 10% revenue; OCARE 2020 Award for Best B2C CSR Campaign in Spain (#AprendoconBritishenCasa); visiting lecturer at IE Business School (2016-2018)
+- Spain eCommerce Manager, Euromaster, Michelin Group (2012-2014): launched the ecommerce platform and owned its P&L; +15% YoY online sales; highest average ticket across Euromaster Europe
+- Marketing Specialist, Transhotel Group (2008-2009): segmented display and SEM ad system generating EUR 500K from hotel chains
+- Assistant Consumer Marketing Manager, Hill's Pet Nutrition, Colgate-Palmolive (2008)
+- Assistant Brand Manager (Trainee), The Coca-Cola Company (2007-2008): relaunch of Nordic Mist (now Royal Bliss)
+
+Education: Master of International Business, Macquarie University, Sydney (2011); Bachelor's in Commercial Management and Marketing, ESIC Business & Marketing School, Madrid (2007); BBA, Florida Atlantic University, USA (2006); Advanced Program in Business AI, ESIC (ongoing).
+Languages: Spanish (native), English (bilingual, C2), Italian (B2).
+Skills: B2B and B2C Marketing, growth marketing, demand generation, ABM, lead nurturing and scoring, brand, content, ecommerce, SEO, GEO, paid media, CRO, marketing mix modeling, HubSpot, Salesforce, GA4, Looker Studio, Power BI, AI agents, n8n, Claude Code.
+
+## AI experiments
+
+- [Calendar + AI](https://www.marketismo.com/experiments/calendar-ai/): concept portal for the British Council with an AI level test and a teacher in the loop
+- [ALMA](https://www.marketismo.com/alma/): school platform whose AI agents turn data into personalised insight
+- [My Second Brain](https://www.marketismo.com/second-brain/): interactive map of Marcelo's Marketing career, skills and blog
+- [Guess the year](https://www.marketismo.com/experiments/guess-the-year/): song recognition app and music game
+
+## Elsewhere
+
+- [LinkedIn](https://www.linkedin.com/in/marcelolv/)
+- [Marketismo on Substack](https://marketismo.substack.com/)

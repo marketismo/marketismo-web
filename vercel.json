@@ -15,6 +15,11 @@
       "source": "/calendar",
       "destination": "/calendar/",
       "permanent": true
+    },
+    {
+      "source": "/guesstheyear",
+      "destination": "/guesstheyear/",
+      "permanent": true
     }
   ],
   "rewrites": [
@@ -41,6 +46,14 @@
     {
       "source": "/calendar/:path+",
       "destination": "https://bc-calendar.vercel.app/:path+"
+    },
+    {
+      "source": "/guesstheyear/",
+      "destination": "https://guess-the-year-fawn.vercel.app/"
+    },
+    {
+      "source": "/guesstheyear/:path+",
+      "destination": "https://guess-the-year-fawn.vercel.app/:path+"
     }
   ]
 }
